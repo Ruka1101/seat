@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>席決めアプリ</title>
+        <script src="app.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>飲み会などで役立つ席決めアプリです。</h1>
+            <p>役職者と非役職者の席を分けることもできます。</p>
+
+            <div class="tableInfo">
+                <label id="tinfo">テーブル数: <input type="text" name="numberOfTables" value="0" id="nTables" onchange="makeTable()"></label><br>
+                <label id="tinfo">テーブル列数: <input type="text" name="numberOfColumns" value="0" id="cTables" onchange="makeTable()"></label><br>
+                <label id="tinfo">テーブル行数: <input type="text" name="numberOfRows" value="0" id="rTables" onchange="makeTable()"></label><br>
+                <label>役職者用の席番号(カンマ区切りで入力してください): <input type="text" name="seatNumberForManagers" value="1,2,3" id="mSeats" onchange="splitSeats()"></label>
+                <p id="noManager">役職者がいない場合は空にしてください。</p>
+            </div>
+
+            <div class="radioButton">
+                <input type="radio" name="position" value="manager" checked>役職者
+                <input type="radio" name="position" value="notManager">非役職者
+            </div>
+
+            <div class="decideSeat">
+                <label>名前：<input type="text" name="name" value="糸井" id="name"></label>
+                <button type="submit" name="seat" onclick="decideSeat()">席決定</button>
+                <p id="displaySeat"></p>
+            </div>
+        </div>
+    </body>
+    
+</html>

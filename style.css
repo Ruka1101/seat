@@ -1,0 +1,51 @@
+@charset "UTF-8";
+.container {
+    padding: 20px;
+}
+
+.tableInfo {
+    padding-top: 20px;
+}
+
+.tableInfo > #tinfo {
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+#noManager {
+    margin: 0;
+}
+
+.radioButton {
+    padding-top: 20px;
+}
+
+.decideSeat {
+    padding-top: 10px;
+}
+
+.tables {
+    padding-top: 25px;
+}
+
+.eachTable {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    counter-reset: seatNumber;
+}
+
+.eachTable table td::before {
+    counter-increment: seatNumber;
+    content: counter(seatNumber);
+}
+
+td {
+    text-align: center;
+    width: 80px;
+    height: 30px;
+}
+
+#seatsForManagers {
+    color: red;
+}
