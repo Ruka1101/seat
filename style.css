@@ -1,6 +1,22 @@
 @charset "UTF-8";
-.container {
-    padding: 20px;
+
+body {
+    margin: 0;
+    background-color:rgb(232, 198, 154);
+    text-align: center;
+}
+
+.title {
+    padding: 20px 0 20px 20px;
+    background-color:bisque;
+}
+
+h1 {
+    margin: 0;
+}
+
+.content {
+    padding-left: 20px;
 }
 
 .tableInfo {
@@ -30,6 +46,8 @@
 
 .eachTable {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
     counter-reset: seatNumber;
